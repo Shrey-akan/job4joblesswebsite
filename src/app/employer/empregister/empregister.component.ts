@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/auth/user.service';
 import * as intelInput from "intl-tel-input";
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 @Component({
   selector: 'app-empregister',
   templateUrl: './empregister.component.html',
@@ -18,7 +19,40 @@ export class EmpregisterComponent {
   data1: any;
   successMessage: string | null = null;
   showWarning: boolean = false;
+  htmlContent = '';
 
+  config: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    minHeight: '5rem',
+    placeholder: 'Enter text here...',
+    translate: 'no',
+    sanitize: false,
+    toolbarPosition: 'top',
+    outline: true,
+    defaultFontName: 'Arial',
+    defaultFontSize: '3',
+    defaultParagraphSeparator: 'p',
+    customClasses: [
+      {
+        name: 'quote',
+        class: 'quote',
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: 'titleText',
+        class: 'titleText',
+        tag: 'h1',
+      },
+    ],
+    toolbarHiddenButtons: [
+      ['bold', 'italic'],
+      ['fontSize']
+    ]
+  };
   loading: boolean = false; // Added loading flag
   constructor(private formBuilder: FormBuilder, private router: Router, private b1: UserService, private http: HttpClient) {
     this.employerdetails = this.formBuilder.group({
