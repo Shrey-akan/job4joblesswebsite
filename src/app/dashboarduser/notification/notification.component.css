@@ -1,0 +1,27 @@
+
+.no-notifications {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100vh; /* Use viewport height for full-screen centering */
+}
+
+.center-content {
+  text-align: center; /* Center text content horizontally */
+}
+
+/* Your existing styles for the image, text, and button */
+.no-notifications-image {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.no-notifications-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.custom-btn {
+  color: white;
+  background-color: #1e2e5c;
+}

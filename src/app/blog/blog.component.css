@@ -1,0 +1,57 @@
+.details-tip {
+    background-color: #f8f9fa;
+    padding: 10px 40px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.summary-tip {
+    font-weight: bold;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.tip-content {
+    margin-top: 10px;
+}
+
+.head_text {
+    font-size: 2.2vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 0.5em auto;
+    color: #1E2E5C;
+    text-align: center;
+}
+
+.sub_head_text {
+    font-size: 1.8vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 0.5em auto;
+    color: #1E2E5C;
+    text-align: left;
+}
+ol {
+    list-style-type: none;
+}
+
+ol li {
+    padding-left: 1.5em;
+    /* text-indent: -1.5em; */
+    margin-bottom: 8px;
+    position: relative;
+    font-size: large;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+ol li::before {
+    content: "\2022";
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+}

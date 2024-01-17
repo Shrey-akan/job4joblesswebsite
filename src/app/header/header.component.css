@@ -1,0 +1,20 @@
+a{
+    color: #1E2E5C;
+}
+
+.active {
+    border-radius: 50px !important;
+    color: white !important;
+    background-color: #1E2E5C !important;
+    padding: 0.7em 2em !important;
+}
+
+nav {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.btn-custom {
+    background-color: #1E2E5C;
+    color: white;
+}
