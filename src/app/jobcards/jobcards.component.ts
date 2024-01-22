@@ -26,6 +26,7 @@ interface Job {
 })
 
 export class JobcardsComponent implements OnInit {
+
   liked: boolean = false;
   data1: any;
   companies = [
@@ -122,6 +123,21 @@ export class JobcardsComponent implements OnInit {
     this.currentPage = 1;
   }
 
+  formatDate(sendTime: Date): Date | null {
+    if (!sendTime) return null;
 
+    const date = new Date(sendTime);
+
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+        console.error('Invalid date format:', sendTime);
+        return null;
+    }
+
+    // Extract only the date part
+    const extractedDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+    return extractedDate;
+}
 
 }
